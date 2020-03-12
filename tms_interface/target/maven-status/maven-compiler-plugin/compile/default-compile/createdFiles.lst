@@ -1,0 +1,6 @@
+com\zhanglubin\tms\service\StudentService.class
+com\zhanglubin\tms\service\CourseService.class
+com\zhanglubin\tms\service\TeacherService.class
+com\zhanglubin\tms\service\UserService.class
+com\zhanglubin\tms\service\MenuService.class
+com\zhanglubin\tms\service\RoleService.class

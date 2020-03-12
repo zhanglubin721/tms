@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhanglubin.tms.dao.UserTeacherDao">
+    <select id="selectTeacherByUsername" resultType="com.zhanglubin.tms.pojo.Teacher" parameterType="string">
+        select tid, tname from teacher left join t_user_teacher
+        on tid=teacher_tid
+        where teacher_tid = #{username}
+    </select>
+    <insert id="insertUserTeacher">
+        insert into t_user_teacher (user_username, teacher_tid) VALUES
+        (#{username}, #{tid})
+    </insert>
+    <delete id="deleteByTeacherid" parameterType="long">
+        delete from t_user_teacher
+        where teacher_tid = #{tid}
+    </delete>
+</mapper>

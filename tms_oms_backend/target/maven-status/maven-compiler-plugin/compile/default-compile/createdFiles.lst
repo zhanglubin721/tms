@@ -1,0 +1,5 @@
+com\zhanglubin\tms\controller\StudentController.class
+com\zhanglubin\tms\controller\UserController.class
+com\zhanglubin\tms\security\TMSSecurityUserDetailsService.class
+com\zhanglubin\tms\controller\CourseController.class
+com\zhanglubin\tms\controller\TeacherController.class

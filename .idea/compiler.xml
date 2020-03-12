@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="tms_service_provider" />
+        <module name="tms_oms_backend" />
+        <module name="tms_security" />
+        <module name="tms_common" />
+        <module name="tms_oms_web" />
+        <module name="tms_interface" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="tms_oms_web" target="1.8" />
+      <module name="tms_security" target="1.7" />
+      <module name="tsm_oms_web" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

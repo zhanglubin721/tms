@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhanglubin.tms.dao.CourseDao">
+    <select id="selectByConditon" resultType="com.zhanglubin.tms.pojo.Course" parameterType="string">
+        select * from t_course
+        <if test="queryString != null and queryString.length > 0">
+            where cname like concat('%',#{queryString},'%') or cid like concat('%',#{queryString},'%')
+        </if>
+    </select>
+    <select id="selectByConditonAndStudent" resultType="com.zhanglubin.tms.pojo.Course">
+        select c.cid, cname, teacher_tid, teacher_tname, course_time, type, credit
+        from t_course c left join t_course_student cs on c.cid = cs.course_cid
+        where cs.student_sid = #{username}
+        <if test="queryString != null and queryString.length > 0">
+            and (c.cname like concat('%',#{queryString},'%') or c.cid like concat('%',#{queryString},'%'))
+        </if>
+    </select>
+    <select id="selectByConditonAndTeacher" resultType="com.zhanglubin.tms.pojo.Course">
+        select c.cid, cname, c.teacher_tid, teacher_tname, course_time, type, credit
+        from t_course c left join t_course_teacher tct on c.cid = tct.course_cid
+        where tct.teacher_tid = #{username}
+        <if test="queryString != null and queryString.length > 0">
+            and (c.cname like concat('%',#{queryString},'%') or c.cid like concat('%',#{queryString},'%'))
+        </if>
+    </select>
+    <select id="selectByid" resultType="com.zhanglubin.tms.pojo.Course" parameterType="long">
+        select * from t_course
+        where cid = #{cid}
+    </select>
+    <update id="updateCourse" parameterType="com.zhanglubin.tms.pojo.Course">
+        update t_course set
+        cname = #{cname},
+        teacher_tid = #{teacher_tid},
+        teacher_tname = #{teacher_tname},
+        course_time = #{course_time},
+        type = #{type},
+        credit = #{credit}
+        where cid = #{cid}
+    </update>
+    <delete id="insertCourse" parameterType="com.zhanglubin.tms.pojo.Course">
+        insert into t_course (cid, cname, teacher_tid, teacher_tname, course_time, type, credit)
+        values (#{cid}, #{cname}, #{teacher_tid}, #{teacher_tname}, #{course_time}, #{type}, #{credit})
+    </delete>
+    <delete id="deleteByCourseid" parameterType="long">
+        delete from t_course
+        where cid = #{cid}
+    </delete>
+    <select id="selectByConditonSpecialid" resultType="com.zhanglubin.tms.pojo.Course">
+        select tc.cid, cname, teacher_tid, teacher_tname, course_time, type, credit
+        from t_course tc left join t_course_special tcs on tc.cid = tcs.course_cid
+        where tcs.special_id = #{specialId}
+        <if test="queryString != null and queryString.length > 0">
+            and (tc.cname like concat('%',#{queryString},'%') or c.cid like concat('%',#{queryString},'%'))
+        </if>
+    </select>
+    <select id="selectByConditonRenxuan" resultType="com.zhanglubin.tms.pojo.Course" parameterType="string">
+        select * from t_course
+        where type = 0
+        <if test="queryString != null and queryString.length > 0">
+            and (tc.cname like concat('%',#{queryString},'%') or c.cid like concat('%',#{queryString},'%'))
+        </if>
+    </select>
+</mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhanglubin.tms.dao.StudentDao">
+    <select id="selectByConditon" resultType="com.zhanglubin.tms.pojo.Student" parameterType="string">
+        select * from student
+        <if test="queryString != null and queryString.length > 0">
+            where sname like concat('%',#{queryString},'%') or sid like concat('%',#{queryString},'%')
+        </if>
+    </select>
+    <delete id="deleteBySid" parameterType="long">
+        delete from student
+        where #{sid} = sid
+    </delete>
+    <insert id="insertStudent" parameterType="com.zhanglubin.tms.pojo.Student">
+        insert into student (sid, gender, class_id, sname, idNumber)
+        values (#{sid}, #{gender}, #{class_id}, #{sname}, #{idNumber})
+    </insert>
+    <update id="updatePassword" parameterType="long">
+        update student set
+        class_id = 10
+        where sid = #{sid}
+    </update>
+    <select id="selectBySid" resultType="com.zhanglubin.tms.pojo.Student" parameterType="long">
+        select * from student
+        where sid = #{sid}
+    </select>
+    <update id="updateStudent" parameterType="com.zhanglubin.tms.pojo.Student">
+        update student set
+        gender = #{gender},
+        class_id = #{class_id},
+        sname = #{sname},
+        idNumber = #{idNumber}
+        where sid = #{sid}
+    </update>
+</mapper>

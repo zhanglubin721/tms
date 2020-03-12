@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:55:29 +0800] "POST /login.do HTTP/1.1" 200 38 http-bio-9002-exec-1 1055
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:55:29 +0800] "GET /user/getUsername.do HTTP/1.1" 200 68 http-bio-9002-exec-2 15
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:55:29 +0800] "GET /user/getMenu.do HTTP/1.1" 200 520 http-bio-9002-exec-3 105
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:55:30 +0800] "GET /course/findPage.do?currentPage=1&pageSize=10 HTTP/1.1" 200 300 http-bio-9002-exec-5 257
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:55:32 +0800] "GET /course/findPage.do?currentPage=1&pageSize=10 HTTP/1.1" 200 300 http-bio-9002-exec-6 63
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:55:35 +0800] "GET /course/chooseFindPage.do?currentPage=1&pageSize=10 HTTP/1.1" 200 300 http-bio-9002-exec-7 42
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:56:16 +0800] "POST /login.do HTTP/1.1" 200 38 http-bio-9002-exec-9 87
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:56:16 +0800] "GET /user/getUsername.do HTTP/1.1" 200 61 http-bio-9002-exec-10 6
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:56:16 +0800] "GET /user/getMenu.do HTTP/1.1" 200 1192 http-bio-9002-exec-1 115
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:56:16 +0800] "GET /course/findPage.do?currentPage=1&pageSize=10 HTTP/1.1" 200 437 http-bio-9002-exec-1 70
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:56:18 +0800] "GET /student/findPage.do?currentPage=1&pageSize=10 HTTP/1.1" 200 1020 http-bio-9002-exec-1 41
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:56:29 +0800] "GET /student/findPage.do?currentPage=2&pageSize=10 HTTP/1.1" 200 1032 http-bio-9002-exec-1 20
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:56:39 +0800] "GET /teacher/findPage.do?currentPage=1&pageSize=10 HTTP/1.1" 200 83 http-bio-9002-exec-1 30
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:56:41 +0800] "GET /course/findPage.do?currentPage=1&pageSize=10 HTTP/1.1" 200 437 http-bio-9002-exec-1 47
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:56:42 +0800] "GET /course/findPage.do?currentPage=1&pageSize=10 HTTP/1.1" 200 437 http-bio-9002-exec-1 30
+0:0:0:0:0:0:0:1 - - [12/Mar/2020:11:56:44 +0800] "GET /course/chooseFindPage.do?currentPage=1&pageSize=10 HTTP/1.1" 403 979 http-bio-9002-exec-9 50

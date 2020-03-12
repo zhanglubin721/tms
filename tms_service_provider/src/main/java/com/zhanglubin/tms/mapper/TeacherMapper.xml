@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhanglubin.tms.dao.TeacherDao">
+
+    <select id="selectByConditon" resultType="com.zhanglubin.tms.pojo.Teacher" parameterType="string">
+        select * from teacher
+        <if test="queryString != null and queryString.length > 0">
+            where tname like concat('%',#{queryString},'%') or tid like concat('%',#{queryString},'%')
+        </if>
+    </select>
+    <select id="findByTid" resultType="com.zhanglubin.tms.pojo.Teacher" parameterType="long">
+        select * from teacher
+        where tid = #{tid}
+    </select>
+    <update id="updateTeacher" parameterType="com.zhanglubin.tms.pojo.Teacher">
+        update teacher set
+        tname = #{tname}
+        where tid = #{tid}
+    </update>
+    <insert id="insertTeacher" parameterType="com.zhanglubin.tms.pojo.Teacher">
+        insert into teacher (tid, tname) VALUES
+        (#{tid}, #{tname})
+    </insert>
+    <delete id="deleteByTeacherid" parameterType="long">
+        delete from teacher
+        where tid = #{tid}
+    </delete>
+</mapper>

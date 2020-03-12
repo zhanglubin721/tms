@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhanglubin.tms.dao.UserStudentDao">
+    <delete id="deleteByStudentid" parameterType="long">
+        delete from t_user_student
+        where student_id = #{sid}
+    </delete>
+    <insert id="insertUserStudent">
+        insert into t_user_student (user_username, student_id)
+        values (#{user_username}, #{student_id})
+    </insert>
+    <select id="selectStudentByUsername" resultType="com.zhanglubin.tms.pojo.Student" parameterType="string">
+        select s.sid, gender, class_id, sname, idNumber from student s left join t_user_student tus
+        on s.sid = tus.student_id
+        where tus.student_id = #{username}
+    </select>
+</mapper>
