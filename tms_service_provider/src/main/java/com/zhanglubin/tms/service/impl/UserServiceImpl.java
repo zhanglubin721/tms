@@ -27,6 +27,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findByUsername(String userName) {
+
         log.info("[登录]username：{}",userName);
         User user = userDao.fndByUsername(userName);
 
