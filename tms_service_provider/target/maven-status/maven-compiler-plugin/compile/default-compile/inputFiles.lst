@@ -13,6 +13,7 @@ D:\workspace\JavaProject\tms\tms_service_provider\src\main\java\com\zhanglubin\t
 D:\workspace\JavaProject\tms\tms_service_provider\src\main\java\com\zhanglubin\tms\service\impl\TeacherServiceImpl.java
 D:\workspace\JavaProject\tms\tms_service_provider\src\main\java\com\zhanglubin\tms\dao\TeacherDao.java
 D:\workspace\JavaProject\tms\tms_service_provider\src\main\java\com\zhanglubin\tms\dao\CourseStudentDao.java
+D:\workspace\JavaProject\tms\tms_service_provider\src\main\java\com\zhanglubin\tms\service\impl\RabbitmqServiceImpl.java
 D:\workspace\JavaProject\tms\tms_service_provider\src\main\java\com\zhanglubin\tms\service\impl\StudentServiceImpl.java
 D:\workspace\JavaProject\tms\tms_service_provider\src\main\java\com\zhanglubin\tms\dao\StudentDao.java
 D:\workspace\JavaProject\tms\tms_service_provider\src\main\java\com\zhanglubin\tms\dao\TestDao.java

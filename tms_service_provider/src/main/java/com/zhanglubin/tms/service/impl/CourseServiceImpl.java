@@ -12,8 +12,11 @@ import com.zhanglubin.tms.pojo.User;
 import com.zhanglubin.tms.service.CourseService;
 import com.zhanglubin.tms.service.StudentService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
+
+import javax.annotation.Resource;
 
 @Slf4j
 @Service
@@ -27,6 +30,9 @@ public class CourseServiceImpl implements CourseService {
 
     @Autowired
     private CourseTeacherDao courseTeacherDao;
+
+    @Resource
+    private AmqpTemplate amqpTemplate;
 
     @Override
     public PageResult pageQuery(QueryPageBean queryPageBean) {
@@ -108,5 +114,11 @@ public class CourseServiceImpl implements CourseService {
     public void add(Course course) {
         courseDao.insertCourse(course);
         courseTeacherDao.insertCourse(course);
+    }
+
+    @Override
+    public void testRabbitmq(Object message) {
+        log.info("[测试rabbitmq]message:{}", message);
+        amqpTemplate.convertAndSend("queueTestKey", message);
     }
 }

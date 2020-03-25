@@ -29,4 +29,6 @@ public interface CourseService {
     void chooseCourse(Long cid, Long sid);
 
     void cancle(Long cid);
+
+    void testRabbitmq(Object message);
 }

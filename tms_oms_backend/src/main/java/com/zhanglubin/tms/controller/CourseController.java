@@ -149,6 +149,11 @@ public class CourseController {
         }
     }
 
+    @GetMapping("/testRabbitmq")
+    public void testRabbitmq() {
+        courseService.testRabbitmq("已发送");
+    }
+
     public String  getUsername() {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if (null != principal && principal instanceof User) {

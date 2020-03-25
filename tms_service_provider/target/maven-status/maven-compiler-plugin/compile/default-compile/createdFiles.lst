@@ -10,6 +10,7 @@ com\zhanglubin\tms\dao\CourseTeacherDao.class
 com\zhanglubin\tms\dao\UserStudentDao.class
 com\zhanglubin\tms\service\impl\TeacherServiceImpl.class
 com\zhanglubin\tms\service\impl\MenuServiceImpl.class
+com\zhanglubin\tms\service\impl\RabbitmqServiceImpl.class
 com\zhanglubin\tms\dao\TeacherDao.class
 com\zhanglubin\tms\dao\TestDao.class
 com\zhanglubin\tms\service\impl\RoleServiceImpl.class

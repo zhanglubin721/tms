@@ -2,5 +2,6 @@ D:\workspace\JavaProject\tms\tms_interface\src\main\java\com\zhanglubin\tms\serv
 D:\workspace\JavaProject\tms\tms_interface\src\main\java\com\zhanglubin\tms\service\MenuService.java
 D:\workspace\JavaProject\tms\tms_interface\src\main\java\com\zhanglubin\tms\service\CourseService.java
 D:\workspace\JavaProject\tms\tms_interface\src\main\java\com\zhanglubin\tms\service\RoleService.java
+D:\workspace\JavaProject\tms\tms_interface\src\main\java\com\zhanglubin\tms\service\RabbitmqService.java
 D:\workspace\JavaProject\tms\tms_interface\src\main\java\com\zhanglubin\tms\service\StudentService.java
 D:\workspace\JavaProject\tms\tms_interface\src\main\java\com\zhanglubin\tms\service\TeacherService.java
